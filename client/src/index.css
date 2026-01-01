@@ -14,17 +14,17 @@
   --elevate-1: rgba(0,0,0, .03);
   --elevate-2: rgba(0,0,0, .08);
 
-  --background: 240 5% 96%;
+  --background: 0 0% 99%;
 
-  --foreground: 240 8% 12%;
+  --foreground: 240 5% 12%;
 
-  --border: 240 6% 88%;
+  --border: 240 4% 88%;
 
-  --card: 240 5% 94%;
+  --card: 0 0% 97%;
 
-  --card-foreground: 240 8% 12%;
+  --card-foreground: 240 5% 12%;
 
-  --card-border: 240 6% 86%;
+  --card-border: 240 4% 91%;
 
   --sidebar: 240 5% 92%;
 
@@ -60,9 +60,9 @@
 
   --muted-foreground: 240 6% 38%;
 
-  --accent: 240 12% 89%;
+  --accent: 320 70% 92%;
 
-  --accent-foreground: 240 8% 18%;
+  --accent-foreground: 320 65% 25%;
 
   --destructive: 0 72% 51%;
 
@@ -76,10 +76,12 @@
   --chart-4: 340 75% 62%;
   --chart-5: 260 60% 60%;
 
-  --font-sans: 'Noto Sans TC', 'PingFang TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-sans: 'Nunito', 'Quicksand', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  --font-display: 'Fredoka One', cursive;
   --font-serif: Georgia, serif;
-  --font-mono: 'SF Mono', Monaco, 'Cascadia Code', monospace;
-  --radius: .75rem;
+  --font-mono: Menlo, monospace;
+  --radius: .5rem; /* 8px */
   --shadow-2xs: 0px 1px 2px 0px hsl(280 65% 58% / 0.05);
   --shadow-xs: 0px 1px 3px 0px hsl(280 65% 58% / 0.08);
   --shadow-sm: 0px 2px 4px -1px hsl(280 65% 58% / 0.06), 0px 1px 2px -1px hsl(280 65% 58% / 0.04);

@@ -1,8 +1,9 @@
-import { Users, Moon, Sun } from "lucide-react";
+import { Users, Moon, Sun, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { useState, useEffect } from "react";
+import { useLocation } from "wouter";
 
 interface ChatHeaderProps {
   username: string;
@@ -11,6 +12,7 @@ interface ChatHeaderProps {
 
 export default function ChatHeader({ username, onlineCount }: ChatHeaderProps) {
   const [isDark, setIsDark] = useState(false);
+  const [, setLocation] = useLocation();
 
   useEffect(() => {
     const isDarkMode = document.documentElement.classList.contains("dark");
@@ -30,6 +32,15 @@ export default function ChatHeader({ username, onlineCount }: ChatHeaderProps) {
   return (
     <header className="sticky top-0 z-50 h-16 px-6 flex items-center justify-between bg-gradient-to-r from-primary/10 via-background to-primary/10 backdrop-blur-sm border-b">
       <div className="flex items-center gap-3">
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={() => setLocation('/')}
+          className="rounded-full hover-elevate active-elevate-2"
+          title="返回首頁"
+        >
+          <Home className="w-4 h-4" />
+        </Button>
         <div className="text-2xl font-bold bg-gradient-to-r from-primary to-chart-4 bg-clip-text text-transparent">
           ✨ 二次元聊天室
         </div>
