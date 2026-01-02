@@ -1,7 +1,7 @@
 import { Users, Moon, Sun, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
 
@@ -57,6 +57,7 @@ export default function ChatHeader({ username, onlineCount }: ChatHeaderProps) {
       <div className="flex items-center gap-3">
         <div className="flex items-center gap-2">
           <Avatar className="w-8 h-8">
+            <AvatarImage src="/下載.svg" alt={`${username} avatar`} />
             <AvatarFallback className="bg-primary text-primary-foreground text-xs font-semibold">
               {username.slice(0, 2).toUpperCase()}
             </AvatarFallback>

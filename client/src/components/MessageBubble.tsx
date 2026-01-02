@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
 
 interface MessageBubbleProps {
@@ -19,6 +19,7 @@ export default function MessageBubble({ message, username, isOwn, timestamp }: M
     >
       {!isOwn && (
         <Avatar className="w-10 h-10 flex-shrink-0">
+          <AvatarImage src="/下載.svg" alt={`${username} avatar`} />
           <AvatarFallback className="bg-gradient-to-br from-chart-1 to-chart-4 text-white text-sm font-semibold">
             {username.slice(0, 2).toUpperCase()}
           </AvatarFallback>

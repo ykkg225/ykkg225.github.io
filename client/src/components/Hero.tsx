@@ -10,7 +10,7 @@ interface HeroProps {
 
 export default function Hero({ name, introduction, email }: HeroProps) {
   // 使用本地頭像文件
-  const avatarUrl = "/avatar.svg";
+  const avatarUrl = "/avatar.jpg";
   const starEmoji = "⭐";
   const sparkleEmoji = "✨";
 
