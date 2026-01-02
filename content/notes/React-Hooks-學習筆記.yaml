@@ -1,0 +1,32 @@
+id: "1"
+title: "React Hooks 學習筆記"
+category: "程式設計"
+content: |
+  # React Hooks 學習筆記
+
+  useState 和 useEffect 是最常用的 Hooks。
+
+  ## useState
+
+  useState 用於狀態管理：
+
+  ```javascript
+  const [count, setCount] = useState(0);
+  ```
+
+  ## useEffect
+
+  useEffect 用於副作用處理。記得 useEffect 的依賴陣列要正確設置！
+
+  ```javascript
+  useEffect(() => {
+    // 副作用邏輯
+  }, [dependencies]);
+  ```
+
+  ## 注意事項
+
+  - 依賴陣列要正確設置
+  - 避免在 useEffect 中直接修改狀態
+  - 記得清理副作用
+

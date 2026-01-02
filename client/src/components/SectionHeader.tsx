@@ -1,20 +1,15 @@
-import { Button } from "@/components/ui/button";
-import { LucideIcon, Plus } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
 interface SectionHeaderProps {
   icon: LucideIcon;
   title: string;
   description?: string;
-  onAdd?: () => void;
-  addButtonText?: string;
 }
 
 export default function SectionHeader({ 
   icon: Icon, 
   title, 
-  description, 
-  onAdd,
-  addButtonText = "新增"
+  description
 }: SectionHeaderProps) {
   return (
     <div className="flex items-start justify-between gap-4 mb-8 flex-wrap">
@@ -31,18 +26,6 @@ export default function SectionHeader({
           )}
         </div>
       </div>
-      
-      {onAdd && (
-        <Button
-          onClick={onAdd}
-          size="lg"
-          className="rounded-full shadow-md hover-elevate active-elevate-2"
-          data-testid="button-add-content"
-        >
-          <Plus className="w-5 h-5 mr-2" />
-          {addButtonText}
-        </Button>
-      )}
     </div>
   );
 }
